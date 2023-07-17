@@ -1,0 +1,32 @@
+<h2 mat-dialog-title style="text-align: center">{{data ? "Kartviziti Düzenle ": "Yeni Kartvizit Ekle"}}</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6-col-lg-6">
+        <form class="example-form" [formGroup]="cardForm">
+          <mat-form-field class="example-full-width">
+            <mat-label>İsim</mat-label>
+            <input matInput placeholder="İsim" formControlName="name">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Ünvan</mat-label>
+            <input matInput placeholder="Ünvan" formControlName="title">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Adres</mat-label>
+            <textarea matInput placeholder="Adres" formControlName="address"> </textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Telefon</mat-label>
+            <input matInput placeholder="Telefon" formControlName="phone">
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Vazgeç</button>
+  <button mat-button (click)="data ? updateCard() : addCard()">{{data ? "Düzenle" : "Ekle"}}</button>
+</mat-dialog-actions>

@@ -1,0 +1,30 @@
+.header {
+    position: relative;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .menu-items {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .menu-items a {
+    color: white;
+    text-decoration: none;
+    margin-left: 16px;
+  }
+  
+  .menu-items a:hover {
+    color: lightgray;
+  }
+  
+  .menu-items a.active {
+    font-weight: bold;
+    color: lightgray;
+  }
+  
